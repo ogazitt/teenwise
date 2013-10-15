@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67F3CB55-D459-44EF-AE55-39A624582FB9}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TeenWise</RootNamespace>
+    <AssemblyName>TeenWiseWebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\debug</BaseIntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DesktopBuildPackageLocation>..\..\obj\debug\package\TeenWiseWebSite.zip</DesktopBuildPackageLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\obj\release\</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DesktopBuildPackageLocation>..\..\bin\release\package\TeenWiseWebSite.zip</DesktopBuildPackageLocation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="controllers\AccountController.cs" />
+    <Compile Include="controllers\SurveyController.cs" />
+    <Compile Include="controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="models\Answer.cs" />
+    <Compile Include="models\JsonSerializer.cs" />
+    <Compile Include="models\Question.cs" />
+    <Compile Include="models\storage\SqlStorageCommand.cs" />
+    <Compile Include="models\storage\SurveyStorage.cs" />
+    <Compile Include="models\Survey.cs" />
+    <Compile Include="models\storage\Storage.cs" />
+    <Compile Include="models\storage\UserStorage.cs" />
+    <Compile Include="models\EmailAddressAttribute.cs" />
+    <Compile Include="models\RegisteredUser.cs" />
+    <Compile Include="properties\AssemblyInfo.cs" />
+    <Compile Include="models\accesscontrol\UserMembershipProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap-custom.css" />
+    <Content Include="content\bootstrap.generated.min.css" />
+    <Content Include="content\font\fontawesome-webfont.svg" />
+    <Content Include="content\images\facebook.png" />
+    <Content Include="content\images\frame.png" />
+    <Content Include="content\images\omri.png" />
+    <Content Include="content\images\sheri.png" />
+    <Content Include="content\images\teenwise-logo.png" />
+    <Content Include="content\images\teenwise-text.png" />
+    <Content Include="content\images\twitter.png" />
+    <Content Include="content\images\WebTimer.png" />
+    <Content Include="content\Survey.css" />
+    <Content Include="content\images\AboutButton.png" />
+    <Content Include="content\images\BannerCorners.png" />
+    <Content Include="content\images\teenwise-header.png" />
+    <Content Include="content\images\RedButton.png" />
+    <Content Include="content\images\SimplifyTagline.png" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="scripts\jquery-1.7.1.js" />
+    <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery-ui-1.8.16.js" />
+    <Content Include="scripts\jquery-ui-1.8.16.min.js" />
+    <Content Include="scripts\less.min.js" />
+    <Content Include="scripts\MicrosoftAjax.js" />
+    <Content Include="scripts\MicrosoftAjax.debug.js" />
+    <Content Include="scripts\MicrosoftMvcAjax.js" />
+    <Content Include="scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="scripts\MicrosoftMvcValidation.js" />
+    <Content Include="scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="views\account\LogOn.aspx" />
+    <Content Include="views\home\About.ascx" />
+    <Content Include="views\home\Team.ascx" />
+    <Content Include="views\home\Product.ascx" />
+    <Content Include="views\home\Index.aspx" />
+    <Content Include="views\shared\SignInControl.ascx" />
+    <Content Include="views\survey\Finish.aspx" />
+    <Content Include="views\survey\Questions.aspx" />
+    <Content Include="views\survey\Start.aspx" />
+    <Content Include="views\survey\Video.aspx" />
+    <Content Include="views\shared\Site.Master" />
+    <Content Include="views\Web.config" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app_data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\shared\Survey.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap.css.chirp.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\font\fontawesome-webfont.eot" />
+    <None Include="content\font\fontawesome-webfont.svgz" />
+    <Content Include="content\font\fontawesome-webfont.ttf" />
+    <Content Include="content\font\fontawesome-webfont.woff" />
+    <None Include="content\less\accordion.less" />
+    <None Include="content\less\alerts.less" />
+    <None Include="content\less\bootstrap.less" />
+    <None Include="content\less\breadcrumbs.less" />
+    <None Include="content\less\button-groups.less" />
+    <None Include="content\less\buttons.less" />
+    <None Include="content\less\carousel.less" />
+    <None Include="content\less\close.less" />
+    <None Include="content\less\code.less" />
+    <None Include="content\less\component-animations.less" />
+    <None Include="content\less\dropdowns.less" />
+    <None Include="content\less\font-awesome.less" />
+    <None Include="content\less\forms.less" />
+    <None Include="content\less\grid.less" />
+    <None Include="content\less\hero-unit.less" />
+    <None Include="content\less\labels-badges.less" />
+    <None Include="content\less\layouts.less" />
+    <None Include="content\less\mixins.less" />
+    <None Include="content\less\modals.less" />
+    <None Include="content\less\navbar.less" />
+    <None Include="content\less\navs.less" />
+    <None Include="content\less\pager.less" />
+    <None Include="content\less\pagination.less" />
+    <None Include="content\less\popovers.less" />
+    <None Include="content\less\progress-bars.less" />
+    <None Include="content\less\reset.less" />
+    <None Include="content\less\responsive-1200px-min.less" />
+    <None Include="content\less\responsive-767px-max.less" />
+    <None Include="content\less\responsive-768px-979px.less" />
+    <None Include="content\less\responsive-navbar.less" />
+    <None Include="content\less\responsive-utilities.less" />
+    <None Include="content\less\responsive.less" />
+    <None Include="content\less\scaffolding.less" />
+    <None Include="content\less\sprites.less" />
+    <None Include="content\less\tables.less" />
+    <None Include="content\less\thumbnails.less" />
+    <None Include="content\less\tooltip.less" />
+    <None Include="content\less\type.less" />
+    <None Include="content\less\utilities.less" />
+    <None Include="content\less\variables.less" />
+    <None Include="content\less\wells.less" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12474</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

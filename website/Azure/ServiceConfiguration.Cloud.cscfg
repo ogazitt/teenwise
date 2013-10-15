@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*" schemaVersion="2013-03.2.0">
+  <Role name="WebSite">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=TeenWise;AccountKey=35Xp6/WAqxds7duNqkCdCvBxUvxria6S+h++vD3PpHRL1tlQLMco6KG9jSm5ODgTweIThCygTYVbr5xKO7VPHQ==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="Omri" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEClKjlMAEa6bSP2EPRnLGR8wDQYJKoZIhvcNAQEBBQAEggEAPJKyhXHTnEgR18rHPpr750fQmaZbI1mB2Th3ad1je+An6KD9uf0lJR1pAqrZvoDewkezT4SQO3rn318AABhcnswzOwX2rwRyC5dsgaPfAHWGbJptMpaacuG22IBoKobQLgSggCOtHLHEfFcaAbj48LfeV66zFNA0/1HWqFN1++5tKkZfJmF0D0wTS8OvzRZIgF5ZDFkmx2hGaG40HI7xHWkMmdDs5imGtrBWI1W9w4m6EhQUiZGs6z6ib6lOYXvcOKSJTaU/Pq2TmnBTFQG4E21OZnpdr1BTtVuE3x40zby15UsP/CJgEV6uKJbmST9kpZOtHF/bZi/AbiPLwqTy9TAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECADMpHQoFbncgBDfyvWz/n8V+PRWLqkBJ5S4" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-10-31T23:59:59.0000000-07:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="EA9B5004C46FBD2D75F41F236B86BDB6471F0928" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

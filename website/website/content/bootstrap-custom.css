@@ -1,0 +1,36 @@
+﻿/*! 
+ * This css must be processed after responsive.css to override default bootstrap styles
+*/
+
+html { overflow: auto; }
+body { padding-top: 80px; padding-bottom: 40px; overflow: auto; }
+a { cursor: pointer; }
+
+/* customize navbar styles */
+.navbar-fixed-top .brand { margin-left: 32px; }
+.navbar-fixed-top .divider-vertical { height: 64px; }
+.navbar-fixed-bottom { margin: 0 0 -4px 0; }
+.navbar-fixed-bottom .nav { padding: 0 0 4px 32px; }
+.navbar-fixed-bottom .pull-left { padding: 8px 0 0 24px; }
+.navbar-fixed-bottom .pull-left img { padding-right: 12px; }
+.navbar-fixed-bottom .pull-right { padding: 8px 0 0 0; min-width: 124px; }
+.navbar-fixed-bottom .pull-right img { height: 24px; margin-right: 4px; }
+.navbar-fixed-bottom .pull-right span { font-size: 14px; }
+
+@media(max-width:600px) {
+    html, body, .container-fluid, .row-fluid { overflow: hidden; }
+    .navbar .container-fluid {width:600px;}
+    .container, .container-fluid { width:600px; *zoom:1; }
+}
+
+.tagline { display: none; text-align: center; }
+.main-content .row-fluid { display: none; padding-top: 24px; }
+
+.team-member { margin-bottom: 24px; }
+.team-member .span8 { margin-top: 48px; margin-left: 12px; }
+.team-member-photo {
+	background: url('images/frame.png') no-repeat;
+	margin: 10px 10px 10px 0px;
+	padding: 10px 20px 20px 10px;
+	Xfloat: left; height: 120px; width: 120px;
+}

@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head runat="server">
+    <link href="<%: Url.Content("~/content/bootstrap.generated.min.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%: Url.Content("~/content/survey.css") %>" rel="stylesheet" type="text/css" />
+    <script src="<%: Url.Content("~/scripts/jquery-1.7.1.min.js") %>" type="text/javascript"> </script>
+    <script src="<%: Url.Content("~/scripts/jquery-1.8.16.min.js") %>" type="text/javascript"> </script>
+    <script src="<%: Url.Content("~/scripts/bootstrap.min.js") %>" type="text/javascript"> </script>
+    <script src="<%: Url.Content("~/scripts/less.min.js") %>" type="text/javascript"> </script>
+    <script type="text/javascript">
+        // document ready handler
+        $(function () {
+            $(window).bind('resize', function () {
+                resizeContent();
+            });
+
+            resizeContent();
+        });
+
+        var resizeContent = function () {
+            var contentHeight = $(window).height() - $('.navbar-fixed-top').outerHeight() - $('.navbar-fixed-bottom').outerHeight() - 60;
+            $('.survey-content-region').height(contentHeight);
+        }
+    </script>
+
+    <asp:ContentPlaceHolder ID="Head" runat="server" />    
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <ul class="nav">
+                    <li>
+                        <a class="brand" href="<%=Url.Action("Index","Home") %>">
+                            <img runat="server" src="~/content/images/teenwise-header.png" alt="TeenWise" />
+                        </a>
+                    </li>
+                </ul>
+                <% Html.RenderPartial("SignInControl"); %>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="survey-content-region container-fluid">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </div>
+
+
+    <div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner">
+            <div class="container-fluid">        
+                <footer>
+                <asp:ContentPlaceHolder ID="Footer" runat="server" />
+                <div class="pull-right">            
+<%--                    <a href="<%=Url.Action("Index","Home") %>"><img runat="server" src="~/content/images/teenwise-header.png" alt="TeenWise" /></a>
+                    <span>&copy;2012</span>--%>
+                    <span>&copy;<%= System.DateTime.Now.Year %> Teen Wise LLC</span>
+                </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ScriptBlock" runat="server" />
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿/* SURVEY PAGES  
+----------------------------------------------------------*/
+.survey-content-region {
+    overflow-y: auto;
+    overflow-x: hidden;      
+    min-width: 600px;
+    padding: 20px 0 20px 0;
+}
+
+.survey-content {
+    padding:0 50px 0 50px;
+    text-align:left;
+    min-width: 800px;  
+}
+
+.survey-content h2 { font-weight: bold; margin-bottom: 10px; }
+.survey-content p { margin-bottom: 5px; max-width: 800px; }
+
+.question {
+    border-top: 1px solid #F0F0F0; 
+    margin: 10px 0 0 0; 
+    padding-top: 5px;
+}
+
+.question-part {
+    border: 0;
+    margin-top: 0;
+    padding-left: 15px;
+}
+
+.question .prompt-break,  
+.question-part .prompt-break {
+    display: block;
+    text-align: left;
+}
+
+.question .prompt-nobreak,  
+.question-part .prompt-nobreak {
+    display: inline-block;
+    text-align: left;
+    min-width: 15px;
+}
+
+.question .answer {
+    display: inline-block;
+    margin: 5px 0 10px 12px;
+}
+
+.question-part .answer {
+    display: inline-block;
+    padding: 0 0 5px 0;
+}
+
+.question .choices, .question-part .choices { margin: 0 0 5px 15px; }
+.question .choices span, .question-part .choices span { font-weight: bolder; padding: 0 20px 0 5px; }
+
+.answer .label-other {
+    display: inline-block;
+    text-align: right;
+    margin: 0 5px 0 12px;
+}
+
+.answer .single-choice { display: inline-block; min-width: 80px; }
+.answer .single-choice span { padding: 0 20px 0 5px; }
+
+.answer .scale-choice { display: inline-block; min-width: 40px; }
+.answer .scale-choice span { padding: 0 20px 0 5px; }
+
+.answer input[type=text]
+{
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    Xborder-width: 0;
+    Xborder-bottom: 1px solid #961919;
+    margin: 3px 0 0 0;
+    padding: 2px 3px 2px 3px;
+    font-size: 1em;
+    color: black;
+    width: 200px;
+    background-color: #FFFFFF;
+}
+
+.answer textarea {
+    min-height: 1em;
+    overflow: hidden;
+    Xborder: 1px solid #961919;
+    margin: 3px 0 -3px 0;
+    padding: 2px 3px 2px 3px;
+    font-size: 1em;
+    color: black;
+    width: 600px;
+    background-color: #FFFFFF;
+    resize: none;
+}
+
+.answer .single-row {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: #ccc;
+    Xborder-width: 0;
+    Xborder-bottom: 1px solid #961919;
+    width: 580px;
+    height: 10px;
+    padding-bottom: 5px;
+}
+
+.answer textarea.small { width: 200px; }
+.answer textarea.medium { width: 320px; }
+
+.answer select {
+    font-size: 10pt;
+    border: 1px solid #961919;  
+    margin: 0 15px 0 5px;
+    padding: 1;
+    width: 200px;  
+}
